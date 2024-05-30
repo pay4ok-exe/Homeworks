@@ -47,6 +47,82 @@ p {
 /* TODO: Add CSS for the rest of your solution below */
 
 
+/* ROW 3 */
+
+.div-3{
+  width: 80px;
+  flex: 1;
+}
+.d1{
+  background-color: red;
+}
+
+.d2{
+  flex: 5;
+}
+
+.d3{
+  background-color: yellow;
+}
+
+
+/* ROW 4 */
+.div-4{
+  width: 80px;
+  flex: 1;
+}
+
+
+/* ROW 5 */
+.div-5{
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  align-self: center;
+}
+
+.wrap-5{
+  justify-content: center;
+}
+
+/* ROW 6 */
+.blue6{
+  background-color: blue;
+  width: 80px;
+}
+
+.div-6{
+  display: flex;
+  flex: 1;
+  background-color: red;
+  justify-content: center;
+}
+
+
+/* ROW 7 */
+.wrap-7{
+  flex: 1;
+  flex-direction: row;
+}
+
+.div-7-1{
+  justify-content: flex-start;
+  width: 80px;
+  background-color: red;
+}
+.div-7-2{
+  flex: 1;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#green7{
+  background-color: green;
+  height: 20px;
+}
+/* ROW 8 */
 .div-8{
   width: 80px;
   background-color: yellow;
@@ -63,4 +139,15 @@ p {
 .emptyExample8 :nth-child(even){
   background-color: green;
   flex: 4;
+}
+
+/* ROW 9 */
+.div-9{
+  width: 80px;
+  background-color: yellow;
+  flex: 4;
+}
+.wrap-9   :nth-child(even){
+  background-color: green;
+  flex: 1;
 }
