@@ -1,3 +1,5 @@
+
+// Задержка на промисах
 function delay(ms) {
     return new Promise(resolve => {
       setTimeout(resolve, ms);
@@ -8,6 +10,8 @@ function delay(ms) {
   delay(3000).then(() => alert('выполнилось через 3 секунды'));
 
 
+
+//   Можно ли "перевыполнить" промис?   NO
   let promise = new Promise(function(resolve, reject) {
     resolve(1);
   
@@ -18,6 +22,8 @@ function delay(ms) {
 
 
 
+
+//   Промисы: сравните then и catch
   let promise1 = new Promise((resolve, reject) => {
     reject('error');
   });
