@@ -48,6 +48,7 @@ kzt.addEventListener("input", async()=>{
     let request = await fetch('./data.json');
     if(request.ok){
         const data = await request.json();
+        console.log(data);
         usd.value = +(kzt.value/data.current.usd);
     }
 });
