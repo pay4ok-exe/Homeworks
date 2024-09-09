@@ -1,3 +1,4 @@
+/* Reset some default styling */
 * {
     margin: 0;
     padding: 0;
@@ -5,17 +6,20 @@
     font-family: Arial, sans-serif;
 }
 
+/* Body styling */
 body {
     background-color: #f4f4f4;
     padding: 20px;
 }
 
+/* Header styling */
 .header {
     text-align: center;
     font-size: 36px;
     margin: 20px;
 }
 
+/* Card container styling */
 .card-container {
     display: flex;
     flex-direction: column;
@@ -24,6 +28,7 @@ body {
     margin: 0 auto;
 }
 
+/* Individual card styling */
 .card {
     background-color: white;
     border-radius: 8px;
@@ -33,6 +38,7 @@ body {
     gap: 20px;
 }
 
+/* Card image styling */
 .card img {
     width: 150px;
     height: 150px;
@@ -40,6 +46,7 @@ body {
     border-radius: 8px;
 }
 
+/* Card content styling */
 .card-content {
     flex-grow: 1;
 }
@@ -55,6 +62,7 @@ body {
     color: #555;
 }
 
+/* Card footer styling */
 .card-footer {
     display: flex;
     align-items: center;
