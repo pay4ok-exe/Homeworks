@@ -1,0 +1,131 @@
+body{
+    margin: 2rem;
+    padding: 0;
+    box-sizing: border-box;
+    border-top: 8px solid #7f7f7f;
+    border-left: 8px solid #7f7f7f;
+    border-bottom: 8px solid black;
+    border-right: 8px solid black;
+    font-family: 'Times New Roman', Times, serif;
+
+    /* background-color: red; */
+}
+
+header{
+    text-align: center;
+    background-color: #fefeb3;
+    margin: 1rem;
+    padding: 0;
+    height: auto;
+    border: 2px double black;
+}
+
+header h1{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: border;
+    margin: 0;
+    padding: 10px;
+    color: red;
+}
+
+main{
+    margin: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    /* background-color: #5bc8f9; */
+    /* width: 200px; */
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    gap: 1rem;
+}
+
+.name, .password, .address, .game, .gender, .age, .photo{
+    flex: 1 ;
+    border: 2px double black;
+    background-color: #5bc8f9;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: inherit;
+    font-size: larger;
+    font-weight: bold;
+
+}
+
+.name-input, .password-input, .address-input, .game-input, 
+.gender-input, .age-input, .photo-input{
+    flex: 3;
+    background-color: #5bc8f9;
+    border: 2px solid black;
+    text-align: start;
+    display: flex;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.name-input, .password-input{
+    align-items: center;
+}
+
+.name-input input, .password-input input{
+    height: 80%;
+    width: 50%;
+    font-size: larger;
+    border: 2px solid #7f7f7f;
+    border-radius: 5px;
+}
+
+.address-input textarea{
+    height: 100px;
+    width: 70%;
+    font-size: larger;
+    margin: 4px;
+    margin-left: 0;
+    font-weight: bold;
+    border: 2px solid #7f7f7f;;
+    /* border: 200px; */
+    border-radius: 5px;
+}
+
+.game-input{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: flex-start;
+    gap: 1rem;
+    
+    padding: 4px;
+    padding-left: 1rem;
+    font-size: large;
+    font-weight: 700;
+}
+
+
+
+.game-input label{
+    /* display: flex; */
+    gap: 5px;
+}
+
+.gender-input{
+    font-weight: 700;
+    font-size: large;
+    align-items: center;
+    display: flex;
+}
+
+.age-input select{
+    
+    margin: 4px;
+    margin-left: 0; 
+    font-size: large;
+    font-family: inherit;
+    font-weight: normal;
+}
