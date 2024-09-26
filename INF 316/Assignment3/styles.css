@@ -1,0 +1,92 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  background-color: #ffffff;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+}
+
+.header {
+  margin-top: 32px;
+}
+
+.container {
+  /* width: 90%; */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header__inner {
+  width: 100%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 32px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.menu__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  text-align: right;
+  margin-right: 32px; /* Space between menu items */
+}
+
+.menu__link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.header__items {
+  display: flex;
+  align-items: center;
+}
+
+.header__cart {
+  margin-right: 20px; /* Space between the cart and the button */
+  font-size: 16px;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+
+  background-color: #ff4d01; /* Bright orange for visibility */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #e04604; /* Darker orange on hover */
+}
