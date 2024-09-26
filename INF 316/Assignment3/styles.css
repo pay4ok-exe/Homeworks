@@ -21,6 +21,7 @@ a {
 }
 button {
   border: none;
+  outline: none;
 }
 
 .header {
@@ -28,7 +29,6 @@ button {
 }
 
 .container {
-  /* width: 90%; */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -37,16 +37,14 @@ button {
   width: 100%;
   background-color: red;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: flex-end;
   gap: 32px;
 }
 
 .menu {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
+  align-items: stretch;
 }
 
 .menu__list {
@@ -57,15 +55,16 @@ button {
 
 .menu__item {
   text-align: right;
-  margin-right: 32px; /* Space between menu items */
+  margin-right: 32px;
 }
 
 .menu__link {
   color: white;
-  text-decoration: none;
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
+  display: flex;
+  align-items: center;
 }
 
 .header__items {
@@ -74,19 +73,28 @@ button {
 }
 
 .header__cart {
-  margin-right: 20px; /* Space between the cart and the button */
-  font-size: 16px;
+  margin-right: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
 }
 
 .btn-primary {
-  padding: 10px 20px;
-
-  background-color: #ff4d01; /* Bright orange for visibility */
+  padding: 20px 24px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  background-color: #ff4d01;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #e04604; /* Darker orange on hover */
+  background-color: #e04604;
 }
