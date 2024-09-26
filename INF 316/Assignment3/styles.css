@@ -98,7 +98,7 @@ button {
   height: 955px;
   /* width: 1005; */
   color: white;
-
+  margin-bottom: 144px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,4 +158,83 @@ button {
 .hero__btn {
   border-color: white;
   color: white;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  align-items: center;
+  /* width: 100%; */
+  justify-content: center;
+  padding: 0 0 50px 0;
+}
+
+.about__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 74px;
+}
+
+.about__image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+.about__items {
+  max-width: 600px;
+  max-height: 650px;
+}
+
+.about__name {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #ff4d01;
+  text-align: left;
+}
+
+.about__title {
+  margin: 15px 67px 19px 0;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 61.99px;
+  text-align: left;
+}
+
+.about__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30.01px;
+  text-align: left;
+  color: #605e5d;
+  margin-bottom: 50px;
+}
+
+.about__stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.about__stats div {
+  margin-right: 20px;
+}
+
+.about__stats span {
+  font-family: Barlow;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 84.02px;
+  text-align: center;
+}
+
+.about__stats p {
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: #989899;
 }
