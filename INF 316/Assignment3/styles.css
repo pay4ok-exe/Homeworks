@@ -87,6 +87,10 @@ button {
   display: flex;
   align-items: center;
 }
+.header__btn.btn {
+  /* padding: 25px 38px; */
+  padding: 17px 24px;
+}
 
 /* Hero Section */
 
@@ -135,7 +139,7 @@ button {
 }
 
 .btn {
-  padding: 20px 24px;
+  padding: 25px 38px;
   font-family: inherit;
   font-size: 16px;
   font-weight: 400;
@@ -166,7 +170,6 @@ button {
   align-items: center;
   /* width: 100%; */
   justify-content: center;
-  padding: 0 0 50px 0;
 }
 
 .about__content {
@@ -187,20 +190,25 @@ button {
   max-height: 650px;
 }
 
-.about__name {
+.section__name {
   font-size: 20px;
+  font-family: inherit;
+  text-transform: uppercase;
   font-weight: 400;
   line-height: 22px;
   color: #ff4d01;
   text-align: left;
 }
 
-.about__title {
-  margin: 15px 67px 19px 0;
+.section__title {
   font-size: 54px;
   font-weight: 400;
   line-height: 61.99px;
   text-align: left;
+}
+
+.about__title {
+  margin: 15px 67px 19px 0;
 }
 
 .about__text {
@@ -237,4 +245,93 @@ button {
   line-height: 20px;
   text-align: center;
   color: #989899;
+}
+
+/* Services Section */
+.services {
+  margin: 300px 0;
+}
+
+.services__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.services__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.services__title {
+  max-width: 424px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.services__header-items {
+  display: flex;
+  gap: 28px;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 28px;
+  padding: 0 24px;
+}
+
+.service {
+  padding: 0 20px 80px 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service__icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 32px;
+}
+
+.service__title {
+  margin-bottom: 14px;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.service__description {
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30.01px;
+  color: #605e5d;
+  margin-bottom: 13px;
+}
+
+.service__item {
+  display: flex;
+  align-items: center;
+}
+
+.service__href {
+  width: 30px;
+  height: 30px;
+  background-color: #191919;
+  margin-right: 10px;
+}
+
+.service__link {
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #191919;
 }
