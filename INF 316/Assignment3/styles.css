@@ -335,3 +335,32 @@ button {
   text-align: left;
   color: #191919;
 }
+
+/* CTA Section */
+.cta {
+  background: url("./assets/cta_bg.png") no-repeat center center;
+  background-size: cover;
+  height: 545px;
+  padding: 130px 0;
+  width: 100%;
+  margin-bottom: 100px;
+  text-align: left;
+}
+
+.cta__content {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cta__text {
+  width: 574px;
+  margin: 20px 0 35px 0;
+  font-size: 16px;
+}
+
+.cta__buttons {
+  display: flex;
+  gap: 28px;
+}
