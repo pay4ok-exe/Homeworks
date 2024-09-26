@@ -499,3 +499,124 @@ button {
 .orange {
   color: #ff4d01;
 }
+
+/* Past Project Section */
+
+.past-projects {
+  margin-bottom: 100px;
+}
+.past-projects__content {
+  width: 100%;
+}
+.past-projects__header {
+  margin-bottom: 64px;
+}
+
+.projects {
+  display: flex;
+  gap: 40px;
+  min-width: calc(545px * 2 + 64px);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.projects::-webkit-scrollbar {
+  display: none;
+}
+
+.card__1 {
+  background-image: url("./assets/project1.png");
+}
+
+.card__2 {
+  background-image: url("./assets/project2.png");
+}
+
+.card__3 {
+  background-image: url("./assets/project3.png");
+}
+
+.project-card {
+  /* background-image: url("./assets/project1.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 545px;
+  min-height: 600px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project-card__content {
+  padding: 30px;
+  width: 485px;
+}
+
+.project-card__title {
+  font-family: Barlow;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 48px;
+  margin-bottom: 16px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.project-card__description {
+  font-family: Barlow;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  padding-right: 38px;
+  margin-bottom: 43px;
+}
+
+.project-card__line {
+  border: 0.5px solid #989899;
+  opacity: 50;
+  margin-bottom: 30px;
+}
+
+.project-card__tag {
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #eaeaeb;
+}
+
+.project-card__tag img {
+  width: 28px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.past-projects__actions {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  gap: 24px;
+  margin-top: 66px;
+}
+
+.past-projects__btn {
+  width: 72px;
+  height: 72px;
+}
+
+.primary {
+  border: 2px solid #ff4d01;
+  background: #ff4d01;
+}
+
+.secondary {
+  border: 2px solid #191919;
+  background: transparent;
+}
