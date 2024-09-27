@@ -371,6 +371,11 @@ button {
   z-index: 1;
 }
 
+.photo {
+  position: relative;
+  width: 100%;
+}
+
 /* Features Section */
 .features {
   position: relative;
@@ -926,6 +931,7 @@ button {
 }
 
 .footer__bottom {
+  margin-top: 130px;
   display: flex;
   align-items: center;
   justify-content: space-between;
