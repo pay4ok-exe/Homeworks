@@ -810,3 +810,140 @@ button {
   font-size: 18px;
   line-height: 20px;
 }
+
+/* Footer Section */
+
+.footer {
+  width: 100%;
+  background-color: #000000;
+  padding: 120px 24px 38px 24px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin-top: 65px;
+  gap: 35px;
+}
+
+.footer__left p {
+  color: white;
+  width: 175px;
+  height: 91px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+}
+.footer__left,
+.footer__menu,
+.footer__utility,
+.footer__contact {
+  flex: 1; /* Each section takes one part of the flex */
+}
+
+.footer__title {
+  font-family: Barlow;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.footer__list {
+  list-style: none; /* No bullet points */
+  padding: 0; /* Remove padding */
+}
+
+.footer__list-twice {
+  display: flex;
+}
+
+.footer__list-twice div {
+  flex: 1;
+}
+
+.footer__list li {
+  margin: 17px 0;
+}
+
+.footer__list a {
+  color: #ffffff; /* Link color */
+  text-decoration: none; /* No underline */
+}
+
+.footer__list a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer__socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer__social-icon {
+  width: 36px; /* Social icon width */
+  height: 36px; /* Social icon height */
+  background-color: #ff4d01;
+}
+
+.footer__bottom {
+  text-align: center; /* Center align text */
+  margin-top: 20px; /* Space above bottom text */
+  font-size: 14px; /* Smaller font size */
+  color: white;
+}
+.footer__contact-item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 32px 27px;
+  border: 2px solid #ff4d01;
+  color: white;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.footer__contact-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.footer__contact-phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__bottom-left {
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #989899;
+  text-align: left;
+}
+
+.footer__bottom-right {
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+}
