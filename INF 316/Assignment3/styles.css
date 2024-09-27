@@ -503,7 +503,7 @@ button {
 /* Past Project Section */
 
 .past-projects {
-  margin-bottom: 100px;
+  margin-bottom: 340px;
 }
 .past-projects__content {
   width: 100%;
@@ -606,7 +606,7 @@ button {
   margin-top: 66px;
 }
 
-.past-projects__btn {
+.scroll__btn {
   width: 72px;
   height: 72px;
 }
@@ -619,4 +619,113 @@ button {
 .secondary {
   border: 2px solid #191919;
   background: transparent;
+}
+
+/* Testimonials Section */
+.testimonials {
+  margin-bottom: 100px;
+  padding: 40px 0;
+}
+
+.testimonials__content {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.testimonials__actions {
+  display: flex;
+  gap: 26px;
+}
+
+.testimonials__cards {
+  min-width: calc(780px * 2); /* Adjust to fit your layout */
+  display: flex;
+  width: 100%;
+  /* scroll-snap-type: x mandatory; */
+  gap: 64px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.testimonial-card {
+  /* scroll-snap-align: start; */
+  min-width: 780px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+.testimonials__cards::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar for webkit browsers */
+}
+
+.testimonial-card__image {
+  width: 340px;
+  height: 318px;
+}
+
+.testimonial-card__content {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.testimonial-card__quote {
+  font-family: Barlow;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 38px;
+  text-align: left;
+  margin-bottom: 13px;
+}
+.testimonial-card__text {
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #989899;
+  margin-bottom: 34px;
+  text-align: left;
+}
+
+.testimonial-card__actions {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.testimonial-card__name {
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.testimonial-card__location {
+  font-family: Barlow;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #989899;
+}
+
+.testimonial-card__link {
+  width: 32px;
+  height: 32px;
+  background: #ff4d01;
 }
