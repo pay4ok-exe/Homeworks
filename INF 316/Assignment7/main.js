@@ -3,7 +3,7 @@ const quizQuestions = [
     question: "Who is the main character of AOT?",
     options: ["Eren", "Armin", "Mikasa", "Levi"],
     correctAnswer: 0,
-    image: "image1.png", // Change the path accordingly
+    image: "image1.png", // Replace with actual image path
   },
   {
     question: "Who killed the Female Titan?",
@@ -11,7 +11,59 @@ const quizQuestions = [
     correctAnswer: 0,
     image: "image2.png",
   },
-  // Add more questions similarly...
+  {
+    question: "What is the name of the island where the story begins?",
+    options: ["Paradis", "Marley", "Shiganshina", "Hizuru"],
+    correctAnswer: 0,
+    image: "image3.png",
+  },
+  {
+    question: "Which titan form does Eren possess?",
+    options: ["Colossal Titan", "Armored Titan", "Attack Titan", "Beast Titan"],
+    correctAnswer: 2,
+    image: "image4.png",
+  },
+  {
+    question: "Who is the commander of the Survey Corps after Erwin?",
+    options: ["Hange", "Mikasa", "Levi", "Jean"],
+    correctAnswer: 0,
+    image: "image5.png",
+  },
+  {
+    question: "Which titan can control other titans?",
+    options: ["Armored Titan", "Beast Titan", "Founding Titan", "Cart Titan"],
+    correctAnswer: 2,
+    image: "image6.png",
+  },
+  {
+    question: "Who was Eren's father?",
+    options: [
+      "Zeke Yeager",
+      "Grisha Yeager",
+      "Kenny Ackerman",
+      "Floch Forster",
+    ],
+    correctAnswer: 1,
+    image: "image7.png",
+  },
+  {
+    question: "What is Armin's titan form?",
+    options: ["Beast Titan", "War Hammer Titan", "Colossal Titan", "Jaw Titan"],
+    correctAnswer: 2,
+    image: "image8.png",
+  },
+  {
+    question: "Which nation is the enemy of Paradis?",
+    options: ["Hizuru", "Marley", "Mid-East", "Liberio"],
+    correctAnswer: 1,
+    image: "image9.png",
+  },
+  {
+    question: "What is Levi's last name?",
+    options: ["Ackerman", "Smith", "Braun", "Forster"],
+    correctAnswer: 0,
+    image: "image10.png",
+  },
 ];
 
 let currentQuestionIndex = 0;
