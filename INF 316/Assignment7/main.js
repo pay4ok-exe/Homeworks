@@ -69,6 +69,7 @@ const quizQuestions = [
 let currentQuestionIndex = 0;
 let score = 0;
 
+// Selecting elements from the DOM
 const startBtn = document.getElementById("start-btn");
 const nextBtn = document.getElementById("next-btn");
 const restartBtn = document.getElementById("restart-btn");
@@ -78,6 +79,7 @@ const questionImage = document.getElementById("question-image");
 const scoreDisplay = document.getElementById("score");
 const correctAnswersDisplay = document.getElementById("correct-answers");
 
+// Function to load questions
 function loadQuestion() {
   const currentQuestion = quizQuestions[currentQuestionIndex];
   questionText.textContent = currentQuestion.question;
@@ -87,8 +89,9 @@ function loadQuestion() {
 
   currentQuestion.options.forEach((option, index) => {
     const label = document.createElement("label");
+    label.classList.add("quiz__option");
     label.innerHTML = `
-        <input type="radio" name="answer" value="${index}">
+        <input type="radio" name="answer" value="${index}" class="quiz__radio">
         ${option}
       `;
     quizForm.appendChild(label);
@@ -97,9 +100,9 @@ function loadQuestion() {
   nextBtn.disabled = true;
 }
 
+// Function to show the result after completing the quiz
 function showResult() {
-  document.getElementById("quiz-screen").classList.remove("active");
-  document.getElementById("result-screen").classList.add("active");
+  toggleScreen("quiz-screen", "result-screen");
 
   scoreDisplay.textContent = score;
   correctAnswersDisplay.innerHTML = quizQuestions
@@ -111,16 +114,24 @@ function showResult() {
     .join("");
 }
 
+// Utility function to toggle between screens
+function toggleScreen(hideScreen, showScreen) {
+  document.getElementById(hideScreen).classList.remove("active");
+  document.getElementById(showScreen).classList.add("active");
+}
+
+// Start the quiz
 startBtn.addEventListener("click", () => {
-  document.getElementById("start-screen").classList.remove("active");
-  document.getElementById("quiz-screen").classList.add("active");
+  toggleScreen("start-screen", "quiz-screen");
   loadQuestion();
 });
 
+// Enable next button after answer is selected
 quizForm.addEventListener("change", () => {
   nextBtn.disabled = false;
 });
 
+// Next question or show results
 nextBtn.addEventListener("click", () => {
   const selectedOption = quizForm.querySelector("input[name='answer']:checked");
   if (!selectedOption) return;
@@ -138,9 +149,9 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
+// Restart the quiz
 restartBtn.addEventListener("click", () => {
   score = 0;
   currentQuestionIndex = 0;
-  document.getElementById("result-screen").classList.remove("active");
-  document.getElementById("start-screen").classList.add("active");
+  toggleScreen("result-screen", "start-screen");
 });
