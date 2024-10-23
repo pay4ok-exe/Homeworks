@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AOT Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Start Screen -->
+  <div id="start-screen" class="screen active">
+    <h1>Welcome to the AOT Quiz</h1>
+    <button id="start-btn">Start Quiz</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz-screen" class="screen">
+    <div class="question-container">
+      <div class="image-container">
+        <img id="question-image" src="" alt="Question Image">
+      </div>
+      <div class="question-box">
+        <h2 id="question-text"></h2>
+        <form id="quiz-form">
+          <!-- Answer options will be injected here -->
+        </form>
+        <button id="next-btn" disabled>Next Question</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Result Screen -->
+  <div id="result-screen" class="screen">
+    <h2>Your Score: <span id="score"></span>/5</h2>
+    <p id="correct-answers"></p>
+    <button id="restart-btn">Restart Quiz</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
