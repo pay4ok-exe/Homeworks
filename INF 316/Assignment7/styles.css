@@ -1,5 +1,6 @@
-/* importing google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+/* Resert all styles */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,12 @@
 
 body {
   background: #4a90e2;
+  min-height: 100vh;
+  min-height: 100vh;
+  background-image: url("./assets/image.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
 }
 
 ::selection {
@@ -16,7 +23,7 @@ body {
   background: #007bff;
 }
 
-.start_btn,
+.start_container,
 .info_box,
 .quiz_box,
 .result_box {
@@ -36,15 +43,31 @@ body {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.start_btn button {
+.start_container {
+  color: #007bff;
+  padding: 30px 50px;
+  border-radius: 5px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.start_container p {
+  font-size: 32px;
+  font-weight: 600;
+}
+.start_container button {
   font-size: 25px;
   font-weight: 500;
-  color: #007bff;
-  padding: 15px 30px;
+  color: #fff;
+  padding: 15px 20px;
   outline: none;
   border: none;
   border-radius: 5px;
-  background: #fff;
+  background: #007bff;
   cursor: pointer;
 }
 
@@ -310,7 +333,7 @@ footer button.show {
   border-radius: 5px;
   display: flex;
   padding: 25px 30px;
-  width: 450px;
+  width: 550px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -332,17 +355,19 @@ footer button.show {
 }
 
 .result_box .score_text span {
-  display: flex;
+  display: block; /* Change from flex to block to avoid forcing elements to stack */
+  text-align: center;
   margin: 10px 0;
   font-size: 18px;
   font-weight: 500;
+  text-align: center;
 }
 
 .result_box .score_text span p {
+  display: inline; /* Inline display for numbers and text to stay on one line */
   padding: 0 4px;
   font-weight: 600;
 }
-
 .result_box .buttons {
   display: flex;
   margin: 20px 0;

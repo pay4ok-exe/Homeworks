@@ -2,77 +2,54 @@
 let questions = [
   {
     numb: 1,
-    question: "What does HTML stand for?",
-    answer: "Hyper Text Markup Language",
+    question: "Who is the main protagonist of Attack on Titan?",
+    answer: "Eren Yeager",
     options: [
-      "Hyper Text Preprocessor",
-      "Hyper Text Markup Language",
-      "Hyper Text Multiple Language",
-      "Hyper Tool Multi Language",
+      "Armin Arlert",
+      "Eren Yeager",
+      "Mikasa Ackerman",
+      "Levi Ackerman",
     ],
   },
   {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
-    options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet",
-    ],
+    question: "What is the name of the town where Eren was born?",
+    answer: "Shiganshina",
+    options: ["Trost", "Shiganshina", "Stohess", "Ragako"],
   },
   {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "Who is the Armored Titan?",
+    answer: "Reiner Braun",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor",
+      "Bertolt Hoover",
+      "Annie Leonhart",
+      "Reiner Braun",
+      "Zeke Yeager",
     ],
   },
   {
     numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    question:
+      "What is the name of the elite military force led by Erwin Smith?",
+    answer: "Scout Regiment",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language",
+      "Military Police",
+      "Garrison Regiment",
+      "Scout Regiment",
+      "Yeagerists",
     ],
   },
   {
     numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
-    options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language",
-    ],
+    question: "Who killed the Beast Titan during the battle at Shiganshina?",
+    answer: "Levi Ackerman",
+    options: ["Mikasa Ackerman", "Eren Yeager", "Levi Ackerman", "Erwin Smith"],
   },
-  // you can uncomment the below codes and make duplicate as more as you want to add question
-  // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
-
-  //   {
-  //   numb: 6,
-  //   question: "Your Question is Here",
-  //   answer: "Correct answer of the question is here",
-  //   options: [
-  //     "Option 1",
-  //     "option 2",
-  //     "option 3",
-  //     "option 4"
-  //   ]
-  // },
 ];
 
 //selecting all required elements
-const start_btn = document.querySelector(".start_btn button");
+const start_btn = document.querySelector(".start_container button");
 const info_box = document.querySelector(".info_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
 const continue_btn = info_box.querySelector(".buttons .restart");
@@ -236,37 +213,19 @@ function optionSelected(answer) {
 }
 
 function showResult() {
-  info_box.classList.remove("activeInfo"); //hide info box
-  quiz_box.classList.remove("activeQuiz"); //hide quiz box
-  result_box.classList.add("activeResult"); //show result box
+  info_box.classList.remove("activeInfo"); // hide info box
+  quiz_box.classList.remove("activeQuiz"); // hide quiz box
+  result_box.classList.add("activeResult"); // show result box
   const scoreText = result_box.querySelector(".score_text");
-  if (userScore > 3) {
-    // if user scored more than 3
-    //creating a new span tag and passing the user score number and total question number
-    let scoreTag =
-      "<span>and congrats! 🎉, You got <p>" +
-      userScore +
-      "</p> out of <p>" +
-      questions.length +
-      "</p></span>";
-    scoreText.innerHTML = scoreTag; //adding new span tag inside score_Text
-  } else if (userScore > 1) {
-    // if user scored more than 1
-    let scoreTag =
-      "<span>and nice 😎, You got <p>" +
-      userScore +
-      "</p> out of <p>" +
-      questions.length +
-      "</p></span>";
+
+  if (userScore === 5) {
+    let scoreTag = `<span>Congrats! 🎉 You got a perfect score of ${userScore} out of ${questions.length}! <br/> You are likely free! 🕊️</span>`;
+    scoreText.innerHTML = scoreTag;
+  } else if (userScore >= 3) {
+    let scoreTag = `<span>Great! 😎 You got ${userScore} out of ${questions.length}! <br/>  You are almost free!</span>`;
     scoreText.innerHTML = scoreTag;
   } else {
-    // if user scored less than 1
-    let scoreTag =
-      "<span>and sorry 😐, You got only <p>" +
-      userScore +
-      "</p> out of <p>" +
-      questions.length +
-      "</p></span>";
+    let scoreTag = `<span>Sorry 😐, You got only ${userScore} out of ${questions.length}. <br/>  You are not free!</span>`;
     scoreText.innerHTML = scoreTag;
   }
 }
