@@ -1,4 +1,3 @@
-// creating an array and passing the number, questions, options, and answers
 let questions = [
   {
     numb: 1,
@@ -112,13 +111,13 @@ restart_quiz.onclick = () => {
 
 // if quitQuiz button clicked
 quit_quiz.onclick = () => {
-  window.location.reload(); //reload the current window
+  window.location.reload();
 };
 
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 
-// if Next Que button clicked
+// if Next Question button clicked
 next_btn.onclick = () => {
   if (que_count < questions.length - 1) {
     //if question count is less than total question length
@@ -139,40 +138,44 @@ next_btn.onclick = () => {
   }
 };
 
-// getting questions and options from array
+// Shuffle function to randomize the order of options
+function shuffleOptions(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+// Function to get questions and options from array with shuffled options
 function showQuetions(index) {
   const que_text = document.querySelector(".que_text");
 
-  //creating a new span and div tag for question and option and passing the value using array index
+  // Creating a new span for the question text
   let que_tag =
     "<span>" +
     questions[index].numb +
     ". " +
     questions[index].question +
     "</span>";
-  let option_tag =
-    '<div class="option"><span>' +
-    questions[index].options[0] +
-    "</span></div>" +
-    '<div class="option"><span>' +
-    questions[index].options[1] +
-    "</span></div>" +
-    '<div class="option"><span>' +
-    questions[index].options[2] +
-    "</span></div>" +
-    '<div class="option"><span>' +
-    questions[index].options[3] +
-    "</span></div>";
-  que_text.innerHTML = que_tag; //adding new span tag inside que_tag
-  option_list.innerHTML = option_tag; //adding new div tag inside option_tag
+  que_text.innerHTML = que_tag;
+
+  // Shuffle the options for the current question
+  const options = [...questions[index].options];
+  shuffleOptions(options);
+
+  let option_tag = options
+    .map((option) => '<div class="option"><span>' + option + "</span></div>")
+    .join("");
+
+  option_list.innerHTML = option_tag;
 
   const option = option_list.querySelectorAll(".option");
 
-  // set onclick attribute to all available options
-  for (i = 0; i < option.length; i++) {
+  for (let i = 0; i < option.length; i++) {
     option[i].setAttribute("onclick", "optionSelected(this)");
   }
 }
+
 // creating the new div tags which for icons
 let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
