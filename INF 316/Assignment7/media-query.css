@@ -1,0 +1,84 @@
+/* Medium-sized Desktop */
+@media (max-width: 1200px) {
+  .start_container,
+  .info_box,
+  .quiz_box,
+  .result_box {
+    width: 60%;
+  }
+  .start_container p {
+    font-size: 28px;
+  }
+  .start_container button {
+    font-size: 22px;
+  }
+}
+
+/* Tablet view */
+@media (max-width: 992px) {
+  .start_container,
+  .info_box,
+  .quiz_box,
+  .result_box {
+    width: 70%;
+    padding: 20px 30px;
+  }
+  .start_container p {
+    font-size: 24px;
+  }
+  .start_container button {
+    font-size: 20px;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) {
+  .start_container,
+  .info_box,
+  .quiz_box,
+  .result_box {
+    width: 80%;
+    padding: 15px 20px;
+  }
+  .start_container p {
+    font-size: 20px;
+  }
+  .start_container button {
+    font-size: 18px;
+  }
+  .info_box,
+  .quiz_box,
+  .result_box {
+    width: 90%;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 576px) {
+  .start_container,
+  .info_box,
+  .quiz_box,
+  .result_box {
+    width: 95%;
+    padding: 10px 15px;
+  }
+  .start_container p {
+    font-size: 18px;
+  }
+  .start_container button {
+    font-size: 16px;
+  }
+  .info_box .info-title,
+  .quiz_box header .title {
+    font-size: 18px;
+  }
+  section .que_text {
+    font-size: 20px;
+  }
+  section .option_list .option {
+    font-size: 15px;
+  }
+  footer button {
+    font-size: 16px;
+  }
+}
